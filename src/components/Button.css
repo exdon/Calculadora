@@ -1,0 +1,35 @@
+:root { 
+    --bg--button: #f0f0f0; /* precisa colocar -- no começo para criar uma variável */
+    --border-button: solid 1px #888;
+} /* variáveis em css, declarando dentro da pseudo classe :root */
+
+.button {
+    font-size: 1.4em;
+    background-color: var(--bg--button);
+    border: none;
+    border-right: var(--border-button);
+    border-bottom: var(--border-button);
+    outline: none; /* uma borda que aparece ao clicar */
+}
+
+.button:active {
+    background-color: #ccc;
+} /* quando clica no botão, ele aplica a cor de background-color */
+
+.button.double {
+    grid-column: span 2;
+} /* quando o botão ocupar duas posições */
+
+.button.triple {
+    grid-column: span 3;
+} /* quando o botão ocupar três posições */
+
+.button.operation {
+    background-color: #fa8231;
+    color: #FFF;
+} /* se for um botão com as operações matemáticas, ele terá a cor do background-color */
+
+.button.operation:active {
+    background-color: #fa8231cc;
+}
+
